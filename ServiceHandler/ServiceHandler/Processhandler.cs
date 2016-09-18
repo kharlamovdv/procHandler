@@ -4,7 +4,6 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ProcessHandler.Entities;
 
 namespace Processhandler
 {
@@ -20,7 +19,7 @@ namespace Processhandler
 
             foreach (Process clsProcess in Process.GetProcesses())
             {
-                if (clsProcess.ProcessName.Contains(name))
+                if (clsProcess.ProcessName.Contains("IExplore.exe"))
                 {
                     return true;
                 }
@@ -39,7 +38,7 @@ namespace Processhandler
             }
             else
             {
-                System.Console.Out.WriteLine("приложение уже запущено");
+                new System.Exception("приложение уже запущено");
             }
 
         }

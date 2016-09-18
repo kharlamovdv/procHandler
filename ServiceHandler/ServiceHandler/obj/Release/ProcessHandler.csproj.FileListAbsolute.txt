@@ -1,1 +1,6 @@
 C:\Programming\ServiceHandler\ServiceHandler\ServiceHandler\bin\Release\ServiceHandler.exe.config
+C:\Programming\ServiceHandler\ServiceHandler\ServiceHandler\obj\Release\ProcessHandler.csprojResolveAssemblyReference.cache
+C:\Programming\ServiceHandler\ServiceHandler\ServiceHandler\bin\Release\ServiceHandler.exe
+C:\Programming\ServiceHandler\ServiceHandler\ServiceHandler\bin\Release\ServiceHandler.pdb
+C:\Programming\ServiceHandler\ServiceHandler\ServiceHandler\obj\Release\ServiceHandler.exe
+C:\Programming\ServiceHandler\ServiceHandler\ServiceHandler\obj\Release\ServiceHandler.pdb
