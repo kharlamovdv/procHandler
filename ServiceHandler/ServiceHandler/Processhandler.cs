@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServiceHandler.Entities;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -14,36 +15,23 @@ namespace Processhandler
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public bool CheckProcess(string name = "IExplore.exe")
+        public bool CheckProcess(string name = "iexplore")
         {
-
-            foreach (Process clsProcess in Process.GetProcesses())
-            {
-                if (clsProcess.ProcessName.Contains("IExplore.exe"))
-                {
-                    return true;
-                }
-            }
-            return false;
+            return Process.GetProcessesByName(name).Any();
         }
 
         /// <summary>
         /// метод запускает процесс
         /// </summary>
-        public void StartProcess()
+        public void StartProcess(ProcessInfo[] processes)
         {
-            if (CheckProcess() == false)
+            foreach (var processInfo in processes)
             {
-                Process.Start("IExplore.exe");
+                if (!CheckProcess(processInfo.Name))
+                {
+                    Process.Start(processInfo.Path);
+                }
             }
-            else
-            {
-                new System.Exception("приложение уже запущено");
-            }
-
         }
-
-
-
     }
 }
