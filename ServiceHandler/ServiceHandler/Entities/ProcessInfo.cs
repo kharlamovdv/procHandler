@@ -8,7 +8,7 @@ namespace ServiceHandler.Entities
 {/// <summary>
 /// класс, описывающий процесс
 /// </summary>
-    class ProcessInfo
+    public class ProcessInfo
     {
         public string Name { get; set; }
         public string Path { get; set; }
