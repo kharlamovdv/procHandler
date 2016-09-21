@@ -12,9 +12,13 @@ using ServiceHandler.Entities;
 namespace ProcessHandler
 {
     class Program
-    {
+    { 
+        //IEnumerable<T>
+        //Nlog
         static void Main(string[] args)
         {
+         
+
             List<ProcessInfo> infos = new List<ProcessInfo>();
 
             var lines = File.ReadAllLines(@"C:\Programming\ServiceHandler\ServiceHandler\ServiceHandler\ProcessConfig.txt");
@@ -24,8 +28,7 @@ namespace ProcessHandler
                 var procPath = line.Split(';')[1];
                 infos.Add(new ProcessInfo(procName, procPath));
             }
-
-            //var manager = new ProcessManager(new[] { new ProcessInfo("iexplore", @"C:\Program Files\Internet Explorer\iexplore.exe") }, TimeSpan.FromMinutes(1));
+           
             var manager = new ProcessManager(infos.ToArray(), TimeSpan.FromMinutes(1));
             manager.Start();
             Console.ReadLine();

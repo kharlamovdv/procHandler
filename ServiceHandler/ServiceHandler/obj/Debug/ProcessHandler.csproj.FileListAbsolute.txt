@@ -4,3 +4,6 @@ C:\Programming\ServiceHandler\ServiceHandler\ServiceHandler\bin\Debug\ServiceHan
 C:\Programming\ServiceHandler\ServiceHandler\ServiceHandler\obj\Debug\ProcessHandler.csprojResolveAssemblyReference.cache
 C:\Programming\ServiceHandler\ServiceHandler\ServiceHandler\obj\Debug\ServiceHandler.exe
 C:\Programming\ServiceHandler\ServiceHandler\ServiceHandler\obj\Debug\ServiceHandler.pdb
+C:\Programming\ServiceHandler\ServiceHandler\ServiceHandler\bin\Debug\NLog.dll
+C:\Programming\ServiceHandler\ServiceHandler\ServiceHandler\bin\Debug\NLog.xml
+C:\Programming\ServiceHandler\ServiceHandler\ServiceHandler\bin\Debug\NLog.config

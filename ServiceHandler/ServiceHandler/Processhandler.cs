@@ -5,11 +5,14 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NLog;
 
 namespace Processhandler
 {
     class Processhandler
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// метод проверяет, является ли процесс запущенным
         /// </summary>
@@ -18,6 +21,7 @@ namespace Processhandler
         public bool CheckProcess(string name = "iexplore")
         {
             return Process.GetProcessesByName(name).Any();
+            
         }
 
         /// <summary>
@@ -32,6 +36,7 @@ namespace Processhandler
                     Process.Start(processInfo.Path);
                 }
             }
+            logger.Log(LogLevel.Debug, "Sample informational message");
         }
     }
 }
