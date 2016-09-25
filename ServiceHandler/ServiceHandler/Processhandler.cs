@@ -12,7 +12,6 @@ namespace Processhandler
     class Processhandler
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
-
         /// <summary>
         /// метод проверяет, является ли процесс запущенным
         /// </summary>
@@ -20,6 +19,7 @@ namespace Processhandler
         /// <returns></returns>
         public bool CheckProcess(string name = "iexplore")
         {
+            logger.Debug("log {0}", "Тест CheckProcess");
             return Process.GetProcessesByName(name).Any();
             
         }
@@ -29,6 +29,7 @@ namespace Processhandler
         /// </summary>
         public void StartProcess(ProcessInfo[] processes)
         {
+
             foreach (var processInfo in processes)
             {
                 if (!CheckProcess(processInfo.Name))
@@ -36,7 +37,6 @@ namespace Processhandler
                     Process.Start(processInfo.Path);
                 }
             }
-            logger.Log(LogLevel.Debug, "Sample informational message");
         }
     }
 }
