@@ -4,3 +4,7 @@
 2016/09/25 11:39:23.051|Debug|log 义耱 ConfigureTimer
 2016/09/25 11:40:23.066|Debug|log 义耱 OnTimedEvent
 2016/09/25 11:40:23.066|Debug|log 义耱 CheckProcess
+2016/09/25 11:59:11.297|Debug|log 义耱 ProcessManager
+2016/09/25 11:59:11.312|Debug|log 义耱 ConfigureTimer
+2016/09/25 12:45:58.799|Debug|log 义耱 ProcessManager
+2016/09/25 12:45:58.813|Debug|log 义耱 ConfigureTimer

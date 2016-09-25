@@ -21,9 +21,6 @@ namespace ProcessHandler
         //Nlog
         static void Main(string[] args)
         {
-      
-
-
             List<ProcessInfo> infos = new List<ProcessInfo>();
             
             var lines = File.ReadAllLines(@"C:\Programming\ServiceHandler\ServiceHandler\ServiceHandler\ProcessConfig.txt");
@@ -38,6 +35,7 @@ namespace ProcessHandler
             manager.Start();
             Console.ReadLine();
         }
+
         
     }
    

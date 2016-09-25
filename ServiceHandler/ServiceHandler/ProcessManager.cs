@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,13 +11,12 @@ using ServiceHandler.Entities;
 
 namespace ServiceHandler
 {
-    public class ProcessManager
+    public class ProcessManager 
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
         private ProcessInfo[] watchedProcesses;
         Timer timer = new Timer();
-
-       
+        
         public ProcessManager(ProcessInfo[] watchedProcesses, TimeSpan checkInterval)
         {
             logger.Debug("log {0}", "Тест ProcessManager");
@@ -49,8 +49,6 @@ namespace ServiceHandler
             Processhandler.Processhandler handler = new Processhandler.Processhandler();
             handler.StartProcess(watchedProcesses);
         }
-
-
     }
 }
 

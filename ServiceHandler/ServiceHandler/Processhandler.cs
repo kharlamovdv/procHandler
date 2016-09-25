@@ -6,12 +6,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NLog;
+using System.Collections;
 
 namespace Processhandler
 {
-    class Processhandler
+    class Processhandler : IEnumerable<ProcessInfo>
     {
+
         private static Logger logger = LogManager.GetCurrentClassLogger();
+        private ProcessInfo[] procesInfo;
+
         /// <summary>
         /// метод проверяет, является ли процесс запущенным
         /// </summary>
@@ -23,6 +27,12 @@ namespace Processhandler
             return Process.GetProcessesByName(name).Any();
             
         }
+
+        public IEnumerator<ProcessInfo> GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
 
         /// <summary>
         /// метод запускает процесс
@@ -37,6 +47,11 @@ namespace Processhandler
                     Process.Start(processInfo.Path);
                 }
             }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return procesInfo.GetEnumerator();
         }
     }
 }
