@@ -10,7 +10,10 @@ using System.Collections;
 
 namespace Processhandler
 {
-    class Processhandler : IEnumerable<ProcessInfo>
+    /// <summary>
+    /// Класс управляет процессом
+    /// </summary>
+    class Processhandler
     {
 
         private static Logger logger = LogManager.GetCurrentClassLogger();
@@ -28,12 +31,6 @@ namespace Processhandler
             
         }
 
-        public IEnumerator<ProcessInfo> GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
-
-
         /// <summary>
         /// метод запускает процесс
         /// </summary>
@@ -47,11 +44,6 @@ namespace Processhandler
                     Process.Start(processInfo.Path);
                 }
             }
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return procesInfo.GetEnumerator();
         }
     }
 }

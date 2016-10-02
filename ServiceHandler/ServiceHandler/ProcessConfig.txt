@@ -1,1 +1,1 @@
-iexplore;C:\Program Files\Internet Explorer\iexplore.exe
+iexplore;C:\Program Files\Internet Explorer\iexplore.exe;30

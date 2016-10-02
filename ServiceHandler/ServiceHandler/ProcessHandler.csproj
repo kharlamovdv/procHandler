@@ -48,15 +48,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\ProcessInfo.cs" />
+    <Compile Include="ExtentionClasss.cs" />
     <Compile Include="Processhandler.cs" />
     <Compile Include="ProcessManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GetProcess.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <None Include="packages.config" />
   </ItemGroup>

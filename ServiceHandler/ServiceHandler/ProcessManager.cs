@@ -11,7 +11,7 @@ using ServiceHandler.Entities;
 
 namespace ServiceHandler
 {
-    public class ProcessManager 
+    public  class ProcessManager 
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
         private ProcessInfo[] watchedProcesses;
@@ -32,6 +32,8 @@ namespace ServiceHandler
             timer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
             timer.Interval = checkInterval.TotalMilliseconds;
         }
+
+        
 
         public void Start()
         {

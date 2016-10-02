@@ -12,11 +12,13 @@ namespace ServiceHandler.Entities
     {
         public string Name { get; set; }
         public string Path { get; set; }
+        public string Interval { get; set; }
 
-        public ProcessInfo(string name, string path)
+        public ProcessInfo(string name, string path, string interval)
         {
             this.Name = name;
             this.Path = path;
+            this.Interval = interval;
         }
     }
 }
